@@ -22,5 +22,14 @@ class DatabaseSeeder extends Seeder
              'gender' => 'M',
              'nationality' => 'Brasileiro'
          ]);
+
+        \App\Models\Gender::create([
+            'name' => 'Ficção',
+        ]);
+
+        \App\Models\Publisher::create([
+            'name' => 'altar books',
+            'description' => 'Desde 1975 produzindo mais do que livros'
+        ]);
     }
 }

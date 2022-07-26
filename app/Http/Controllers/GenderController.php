@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Author;
+use App\Models\Gender;
 use Illuminate\Http\Request;
 
-class AuthorController extends Controller
+class GenderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        return response()->json(Author::all());
+        return response()->json(Gender::all());
     }
 
     /**
@@ -25,7 +25,7 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-        (new Author())->fill($request->all())->save();
+        (new Gender())->fill($request->all())->save();
 
         return response()->json(["message"=> "Successfully"]);
     }
@@ -38,7 +38,7 @@ class AuthorController extends Controller
      */
     public function show($id)
     {
-        return response()->json(Author::find($id));
+        return response()->json(Gender::find($id));
     }
 
     /**
@@ -50,7 +50,7 @@ class AuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        (new Author())->find($id)->fill($request->all())->save();
+        (new Gender())->find($id)->fill($request->all())->save();
         return response()->json(["message"=> "Successfully"]);
     }
 
@@ -62,6 +62,6 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        return response()->json(Author::find($id));
+        return response()->json(Gender::find($id));
     }
 }
