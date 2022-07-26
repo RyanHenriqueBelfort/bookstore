@@ -11,4 +11,8 @@ class Publisher extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = ['name', 'description'];
+
+    public function books(){
+        return $this->hasMany('App\models\Book');
+    }
 }

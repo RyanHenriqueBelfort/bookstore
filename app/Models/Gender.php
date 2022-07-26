@@ -11,4 +11,8 @@ class Gender extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = ['name'];
+
+    public function books(){
+        return $this->hasMany('App\models\Book');
+    }
 }
