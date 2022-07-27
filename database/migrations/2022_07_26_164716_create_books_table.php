@@ -20,7 +20,11 @@ return new class extends Migration
             $table->foreignId('gender_id')->constrained();
             $table->foreignId('publisher_id')->constrained();
 
+            $table->string('title');
+            $table->integer('release_year');
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

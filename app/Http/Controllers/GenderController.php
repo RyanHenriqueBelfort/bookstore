@@ -38,7 +38,7 @@ class GenderController extends Controller
      */
     public function show($id)
     {
-        return response()->json(Gender::find($id));
+        return response()->json(Gender::findOrFail($id));
     }
 
     /**
@@ -50,7 +50,8 @@ class GenderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        (new Gender())->find($id)->fill($request->all())->save();
+        $gender = Gender::findOrFail($id);
+        $gender->update($request->all());
         return response()->json(["message"=> "Successfully"]);
     }
 
@@ -62,6 +63,6 @@ class GenderController extends Controller
      */
     public function destroy($id)
     {
-        return response()->json(Gender::find($id));
+        return response()->json(Gender::findOrFail($id)->delete());
     }
 }

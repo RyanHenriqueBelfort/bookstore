@@ -38,7 +38,7 @@ class PublisherController extends Controller
      */
     public function show($id)
     {
-        return response()->json(Publisher::find($id));
+        return response()->json(Publisher::findOrFail($id));
     }
 
     /**
@@ -50,7 +50,8 @@ class PublisherController extends Controller
      */
     public function update(Request $request, $id)
     {
-        (new Publisher())->find($id)->fill($request->all())->save();
+        $publisher = Publisher::findOrFail($id);
+        $publisher->update($request->all());
         return response()->json(["message"=> "Successfully"]);
     }
 
@@ -62,6 +63,6 @@ class PublisherController extends Controller
      */
     public function destroy($id)
     {
-        return response()->json(Publisher::find($id));
+        return response()->json(Publisher::findOrFail($id)->delete());
     }
 }

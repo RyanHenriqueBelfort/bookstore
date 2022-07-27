@@ -50,7 +50,8 @@ class AuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        (new Author())->find($id)->fill($request->all())->save();
+        $author = Author::findOrFail($id);
+        $author->update($request->all());
         return response()->json(["message"=> "Successfully"]);
     }
 
@@ -62,6 +63,6 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        return response()->json(Author::findOrFail($id));
+        return response()->json(Author::findOrFail($id)->delete());
     }
 }

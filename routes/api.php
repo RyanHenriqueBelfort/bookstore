@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\PublisherController;
+use App\Http\Controllers\BookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,5 @@ Route::resources([
     'author' => AuthorController::class,
     'gender' => GenderController::class,
     'publisher' => PublisherController::class,
+    'book' => BookController::class,
 ]);
