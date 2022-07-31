@@ -52,10 +52,11 @@ $ npm install
 
 # Execute o Xampp 
 
-# Cria uma banco de dados no MySql acessando 
+# Cria uma banco de dados no MySql acessando No Browser
 $ localhost/phpMyAdmin/
 
-# Clonar a .env e colocar na DB_DATABASE o nome do seu banco
+# Entre no projeto com seu editor de preferencia e renomeie a .env.example para .env
+# E coloque na linha DB_DATABASE o nome do seu banco Ex: DB_DATABASE 
 
 # Rode as migrations
 $ php artisan migrate
@@ -67,6 +68,8 @@ $ php artisan db:seed
 $ php artisan serve
 
 # O servidor inciará na porta:8000
+# Obs: se trocar a porta 8000 para alguma outra lembre-se de ir no Front-End em src/service/axios.js
+# E alterar 8000 para a porta escolhida
 ```
 
 # 🛠 Tecnologias
