@@ -50,6 +50,11 @@ $ composer install
 # E depois
 $ npm install
 
+# Execute o Xampp 
+
+# Cria uma banco de dados no MySql acessando 
+$ localhost/phpMyAdmin/
+
 # Clonar a .env e colocar na DB_DATABASE o nome do seu banco
 
 # Rode as migrations
