@@ -40,7 +40,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina também a fe
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/RyanHenriqueBelfort/bookstore.git>
+$ git clone https://github.com/RyanHenriqueBelfort/bookstore.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd bookstore
