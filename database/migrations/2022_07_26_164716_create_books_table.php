@@ -15,14 +15,11 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-
             $table->foreignId('author_id')->constrained();
             $table->foreignId('gender_id')->constrained();
             $table->foreignId('publisher_id')->constrained();
-
             $table->string('title');
-            $table->integer('release_year');
-
+            $table->integer('release_year')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

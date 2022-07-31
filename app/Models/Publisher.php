@@ -12,7 +12,7 @@ class Publisher extends Model
 
     protected $fillable = ['name', 'description'];
 
-    public function books(){
+    public function books() {
         return $this->hasMany('App\models\Book');
     }
 }

@@ -10,10 +10,6 @@ class Author extends Model
 {
     use HasFactory, SoftDeletes;
 
-    // protected $hidden = [
-    //     'gender'
-    // ];S
-
     /**
      * The attributes that are mass assignable.
      *
@@ -21,7 +17,7 @@ class Author extends Model
      */
     protected $fillable = ['name', 'year_birth', 'gender', 'nationality'];
 
-    public function books(){
+    public function books() {
         return $this->hasMany('App\models\Book');
     }
 }

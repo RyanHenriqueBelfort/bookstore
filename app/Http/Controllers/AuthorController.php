@@ -12,8 +12,7 @@ class AuthorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         return response()->json(Author::all());
     }
 
@@ -23,10 +22,8 @@ class AuthorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         (new Author())->fill($request->all())->save();
-
         return response()->json(["message"=> "Successfully"]);
     }
 
@@ -36,8 +33,7 @@ class AuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         return response()->json(Author::findOrFail($id));
     }
 
@@ -48,8 +44,7 @@ class AuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         $author = Author::findOrFail($id);
         $author->update($request->all());
         return response()->json(["message"=> "Successfully"]);
@@ -61,8 +56,7 @@ class AuthorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         return response()->json(Author::findOrFail($id)->delete());
     }
 }

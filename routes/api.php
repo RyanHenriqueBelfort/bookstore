@@ -18,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resources([
-    'author' => AuthorController::class,
-    'gender' => GenderController::class,
-    'publisher' => PublisherController::class,
-    'book' => BookController::class,
-]);
+Route::resources(
+    [
+        'author' => AuthorController::class,
+        'gender' => GenderController::class,
+        'publisher' => PublisherController::class,
+        'book' => BookController::class,
+    ]
+);

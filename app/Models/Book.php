@@ -12,8 +12,8 @@ class Book extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = ['author_id', 'gender_id', 'publisher_id', 'title', 'release_year'];
-    public function parents(){
 
+    public function parents() {
         return $this->belongsTo(['App\Models\Author', 'App\Models\Publisher', 'App\Models\Gender']);
     }
 }

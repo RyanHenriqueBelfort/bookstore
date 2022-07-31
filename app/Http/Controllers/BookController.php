@@ -12,8 +12,7 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         return response()->json(Book::all());
     }
 
@@ -23,8 +22,7 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $book = Book::create($request->all());
         return response()->json($book, 201);
     }
@@ -35,8 +33,7 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         return response()->json(Book::findOrFail($id));
     }
 
@@ -47,11 +44,10 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         $book = Book::findOrFail($id);
         $book->update($request->all());
-        return response()->json($book, 200);
+        return response()->json(["message"=> "Successfully"]);
     }
 
     /**
@@ -60,8 +56,7 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         return response()->json(Book::findOrFail($id)->delete());
     }
 }

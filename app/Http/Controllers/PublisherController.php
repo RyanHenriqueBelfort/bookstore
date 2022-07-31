@@ -23,10 +23,8 @@ class PublisherController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         (new Publisher())->fill($request->all())->save();
-
         return response()->json(["message"=> "Successfully"]);
     }
 
@@ -36,8 +34,7 @@ class PublisherController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         return response()->json(Publisher::findOrFail($id));
     }
 
@@ -48,8 +45,7 @@ class PublisherController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         $publisher = Publisher::findOrFail($id);
         $publisher->update($request->all());
         return response()->json(["message"=> "Successfully"]);
@@ -61,8 +57,7 @@ class PublisherController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         return response()->json(Publisher::findOrFail($id)->delete());
     }
 }

@@ -12,7 +12,7 @@ class Gender extends Model
 
     protected $fillable = ['name'];
 
-    public function books(){
+    public function books() {
         return $this->hasMany('App\models\Book');
     }
 }

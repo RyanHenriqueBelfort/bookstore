@@ -12,8 +12,7 @@ class GenderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         return response()->json(Gender::all());
     }
 
@@ -23,10 +22,8 @@ class GenderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         (new Gender())->fill($request->all())->save();
-
         return response()->json(["message"=> "Successfully"]);
     }
 
@@ -36,8 +33,7 @@ class GenderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         return response()->json(Gender::findOrFail($id));
     }
 
@@ -48,8 +44,7 @@ class GenderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         $gender = Gender::findOrFail($id);
         $gender->update($request->all());
         return response()->json(["message"=> "Successfully"]);
@@ -61,8 +56,7 @@ class GenderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         return response()->json(Gender::findOrFail($id)->delete());
     }
 }
