@@ -47,11 +47,11 @@ class AuthorController extends Controller
     public function update(Request $request, $id) {
         $author = Author::findOrFail($id);
         $author->update($request->all());
-        return response()->json(["message"=> "Successfully"]);
-    }
+
+        return response()->json(["message"=> "Successfully"]);}
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resource from storage
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
