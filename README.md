@@ -1,67 +1,82 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Back-End
+## Bem vindo a <font size="8">📚BookStore!</font>
+Ola, projeto criado a partir de um desafio, onde foi proposto criar um crud de uma 
+biblioteca
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## Requisitos
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Tabela de conteúdos 
+================
+<!--ts--> 
+[Feature](#feature)
+[Instalação](#instalação) 
+[Pre Requisitos](#pre-requisitos) 
+[Passa a Passo](#passo-a-passo)  <!--te-->
 
 
-composer install
+
+# Feature
+
+### Features
+
+ - [x] Criação, edição e exclusão de livro
+ - [x] Criação, edição e exclusão de Autor
+ - [x] Criação, edição e exclusão de Gênero
+ - [x] Criação, edição e exclusão de Editora
+
+# Instalação
+Para realizar a instalação segue os requitos e o passo a passo
+
+# Pre-requisitos
+
+Para rodar esse projeto voce ira precisar ter:
+
+1.  PHP - v8.1.6
+2.  Laravel - v9.21.6
+3.  Xampp - v9.21.6
+4.  Composer - v2.3.10
+4.  Node - v16.13.1
+
+## Passo a Passo
+Antes de começar, você vai precisar ter instalado em sua máquina também a ferramenta: [Git](https://git-scm.com). Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/RyanHenriqueBelfort/bookstore.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd bookstore
+
+# Instale as dependências
+$ composer install
+# E depois
+$ npm install
+
+# Execute o Xampp 
+
+# Cria um banco de dados no MySql acessando No Browser
+# Voce pode escolher a base de dados Ex: bookstore
+$ localhost/phpMyAdmin/
+
+# Entre no projeto com seu editor de preferencia e faça um copia do .env.example e renomeie para .env
+# E  configure o seu arquivo .env com as credencias do banco de dados
+
+# Rode as migrations
+$ php artisan migrate
+
+# Rode os seed
+$ php artisan db:seed
+
+# Execute a aplicação
+$ php artisan serve
+
+# O servidor iniciará na porta:8000
+# Obs: se trocar a porta 8000 para alguma outra lembre-se de ir no Front-End em src/service/axios.js
+# E alterar 8000 para a porta escolhida
+```
+
+# 🛠 Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
+ - [Node.js](https://nodejs.org/en/) 
+ - [PHP](https://www.php.net) 
+ - [Laravel](https://laravel.com) 
+ - [Composer](https://getcomposer.org)
+ - [MySql](https://www.mysql.com) 
