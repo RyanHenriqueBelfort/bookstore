@@ -17,10 +17,10 @@ Tabela de conteúdos
 
 ### Features
 
- - [x] Criação, edição e exclusão de livro
- - [x] Criação, edição e exclusão de Autor
- - [x] Criação, edição e exclusão de Gênero
- - [x] Criação, edição e exclusão de Editora
+ - [x] Criação, edição e exclusão de livro.
+ - [x] Criação, edição e exclusão de Autor.
+ - [x] Criação, edição e exclusão de Gênero.
+ - [x] Criação, edição e exclusão de Editora.
 
 # Instalação
 Para realizar a instalação segue os requitos e o passo a passo
